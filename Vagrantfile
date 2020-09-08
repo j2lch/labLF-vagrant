@@ -5,7 +5,7 @@ require 'getoptlong'
 
 nodes = [
   { :hostname => 'master', :ip => '192.168.56.50', :box => 'hashicorp/bionic64', :ram => 2048, :cpu => 2 },
-  # { :hostname => 'node1', :ip => '192.168.56.51', :box => 'hashicorp/bionic64', :ram => 1024, :cpu => 2 }
+  { :hostname => 'node1', :ip => '192.168.56.51', :box => 'hashicorp/bionic64', :ram => 1024, :cpu => 2 }
 ]
 
 opts = GetoptLong.new(
