@@ -23,6 +23,7 @@ Vagrant.configure("2") do |config|
     end
 
     config.vm.provision 'shell', privileged: true, inline: <<-SHELL
+      sudo swapoff -a
       sudo useradd -m -s /bin/bash student
       sudo usermod -aG sudo student
     SHELL
