@@ -1,26 +1,10 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-require 'getoptlong'
-
 nodes = [
   { :hostname => 'master', :ip => '192.168.56.50', :box => 'hashicorp/bionic64', :ram => 2048, :cpu => 2 },
   { :hostname => 'node1', :ip => '192.168.56.51', :box => 'hashicorp/bionic64', :ram => 1024, :cpu => 2 }
 ]
-
-opts = GetoptLong.new(
-  ['--private-network', GetoptLong::OPTIONAL_ARGUMENT ]
-)
-
-privateNetwork = ''
-
-opts.each do |opt, arg|
-  case opt
-    when '--private-network'
-      privateNetwork=arg
-  end
-end
-
 
 ssh_pub_key = File.readlines("./labLF-ssh-key.pub").first.strip
 
