@@ -18,6 +18,7 @@ Vagrant.configure("2") do |config|
       nodeconfig.vm.provider "virtualbox" do |vb|
         vb.memory = node[:ram]
         vb.cpus = node[:cpu]
+        vb.gui = false
       end
     end
 
