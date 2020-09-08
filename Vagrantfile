@@ -21,6 +21,7 @@ opts.each do |opt, arg|
   end
 end
 
+
 ssh_pub_key = File.readlines("./labLF-ssh-key.pub").first.strip
 
 Vagrant.configure("2") do |config|
